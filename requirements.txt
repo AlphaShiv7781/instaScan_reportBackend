@@ -1,0 +1,7 @@
+crewai>=0.22.6
+langchain>=0.1.14
+langchain-google-genai>=0.0.9
+python-dotenv>=1.0.1
+uvicorn
+fastapi
+langchain-community
