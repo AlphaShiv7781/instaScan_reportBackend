@@ -11,7 +11,7 @@ disease_analysis_task = Task(
         "JSON format:\n"
         "{\n"
         "  \"riskLevel\": \"Low/Moderate/High\",\n"
-        "  \"description\": \"Short medical summary\"\n"
+        "  \"description\": \"Short medical summary in 2 lines\"\n"
         "}"
     ),
     agent=medical_analyst
@@ -19,7 +19,7 @@ disease_analysis_task = Task(
 
 treatment_task = Task(
     description=(
-        "Based on the {label} and risk level, suggest medically appropriate treatments, "
+        "Based on the {label} and risk level, suggest medically appropriate treatments in short points and only 5 points, "
         "precautions, or lifestyle recommendations."
     ),
     expected_output=(
@@ -40,7 +40,7 @@ explanation_task = Task(
         "JSON format:\n"
         "{\n"
         "  \"explanation\": {\n"
-        "    \"en\": \"Easy-to-understand English explanation\",\n"
+        "    \"en\": \"Easy-to-understand English explanation in 4 lines\",\n"
         "  }\n"
         "}"
     ),
