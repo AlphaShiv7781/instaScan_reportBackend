@@ -2,16 +2,24 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import certifi
+os.environ['SSL_CERT_FILE'] = certifi.where()
+
 from crewai import Agent
-from langchain_community.chat_models import ChatLiteLLM
+
+# ✅ Correct CrewAI format
+llm = "gemini/gemini-2.5-flash"
+
+# from langchain_community.chat_models import ChatLiteLLM
 
 # Set up Gemini LLM
-llm = ChatLiteLLM(
-    model="gemini/gemini-1.5-flash",
-    temperature=0.1,
-    verbose=True,
-    api_key="AIzaSyCJkcCpvggxQj9SD5Wx50mKVRSel4uW5Rs" 
-)
+# llm = ChatLiteLLM(
+#     model="gemini/gemini-1.5-flash",
+#     temperature=0.1,
+#     verbose=True,
+#     api_key="AIzaSyCJkcCpvggxQj9SD5Wx50mKVRSel4uW5Rs" 
+# )
+
 
 # Agent to analyze disease & risk
 medical_analyst = Agent(

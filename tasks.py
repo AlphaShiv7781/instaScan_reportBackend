@@ -19,7 +19,7 @@ disease_analysis_task = Task(
 
 treatment_task = Task(
     description=(
-        "Based on the {label} and risk level, suggest medically appropriate treatments in short points and only 5 points, "
+        "Based on the {label} and risk level, suggest medically appropriate treatments in one line point and only 5 points, "
         "precautions, or lifestyle recommendations."
     ),
     expected_output=(
